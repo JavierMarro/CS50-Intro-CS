@@ -11,24 +11,25 @@ First week of the course covers: Introduction to C with a few simple problems: H
 
 The task was to implement a program in C that recreates that pyramid, using hashes (#) for bricks, as in the below:
 
-       #
-      ##
-     ###
-    ####
+```
+           #
+          ##
+         ###
+        ####
+       #####
+      ######
+     #######
+    ########
+```
 
-#####
-
-######
-
-#######
-########
 The user is to be prompted for an int for the pyramid’s actual height, so that the program can also output shorter pyramids like the below:
 
-#
-
-##
-
-###
+```
+    #
+    ##
+    ###
+    ####
+```
 
 Re-prompting the user, again and again as needed, if their input is not greater than 0 or not an int altogether.
 
@@ -50,19 +51,21 @@ So the program prompts the user for a credit card number and then reports (via p
 
 The task was to create a program in C that determines the winner of a short Scrabble-like game. The program prompts for input twice: once for “Player 1” to input their word and once for “Player 2” to input their word. Then, depending on which player scores the most points, the program either prints “Player 1 wins!”, “Player 2 wins!”, or “Tie!” (in the event the two players score equal points). For example:
 
-$ make scrabble  
-$ ./scrabble  
-Player 1: Question?  
-Player 2: Question!  
-Tie!  
-$ ./scrabble  
-Player 1: red  
-Player 2: wheelbarrow  
-Player 2 wins!  
-$ ./scrabble  
-Player 1: COMPUTER  
-Player 2: science  
+```
+$ make scrabble
+$ ./scrabble
+Player 1: Question?
+Player 2: Question!
+Tie!
+$ ./scrabble
+Player 1: red
+Player 2: wheelbarrow
+Player 2 wins!
+$ ./scrabble
+Player 1: COMPUTER
+Player 2: science
 Player 1 wins!
+```
 
 ### Readability
 
@@ -73,13 +76,15 @@ The task was to implement a program that calculates the approximate grade level 
 Unencrypted text is generally called plaintext. Encrypted text is generally called ciphertext. And the secret used is called a key.
 The task was to write a program that enables the user to encrypt messages using Caesar’s cipher. At the time the user executes the program, they should decide, by providing a command-line argument, what the key should be in the secret message they’ll provide at runtime. We shouldn’t necessarily assume that the user’s key is going to be a number; though you may assume that, if it is a number, it will be a positive integer. Example:
 
-Usage: ./caesar key  
-$ ./caesar 13  
-plaintext: Hi there!  
-ciphertext: Uv gurer!  
-$ ./caesar 26  
-plaintext: This is CS50.  
+```
+Usage: ./caesar key
+$ ./caesar 13
+plaintext: Hi there!
+ciphertext: Uv gurer!
+$ ./caesar 26
+plaintext: This is CS50.
 ciphertext: This is CS50.
+```
 
 ## Set of problems Week 3 - Algorithms
 
@@ -95,19 +100,21 @@ Context: “plurality vote” (also known as “first-past-the-post” or “win
 
 This task was about completing the TODO tasks to make the program functional (therefore only the code blocks after the TODO are what I wrote for the task). Example of how the program should behave:
 
-$ ./plurality Alice Bob Charlie  
+```
+$ ./plurality Alice Bob Charlie
 Number of voters: 3
-Vote: Alice  
-Vote: Alice  
-Vote: Bob  
-Alice  
-$ ./plurality Alice Bob Charlie  
-Number of voters: 3  
-Vote: David  
-Invalid vote.  
-Vote: Alice  
-Vote: Alice  
+Vote: Alice
+Vote: Alice
+Vote: Bob
 Alice
+$ ./plurality Alice Bob Charlie
+Number of voters: 3
+Vote: David
+Invalid vote.
+Vote: Alice
+Vote: Alice
+Alice
+```
 
 ### Runoff
 

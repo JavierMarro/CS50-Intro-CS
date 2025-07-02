@@ -5,9 +5,9 @@ Some programs were fully written by me from scratch (Week 1 and 2), others would
 
 1. [Week 1 - Intro to C](#set-of-problems-week-1---intro-to-C)
 2. [Week 2 - Arrays in C](#set-of-problems-week-2---arrays-in-C)
-3. [Week 2 - Algorithms](#set-of-problems-week-3---algorithms)
-4. [Week 2 - Memory](#set-of-problems-week-4---memory)
-5. [Week 2 - Data Structures](#set-of-problems-week-5---data-structures)
+3. [Week 3 - Algorithms](#set-of-problems-week-3---algorithms)
+4. [Week 4 - Memory](#set-of-problems-week-4---memory)
+5. [Week 5 - Data Structures](#set-of-problems-week-5---data-structures)
 
 ## Set of problems Week 1 - Intro to C
 

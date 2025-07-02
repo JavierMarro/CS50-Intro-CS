@@ -1,7 +1,7 @@
 # CS50: Introduction to Computer Science
 
 This repository contains code created while taking [**CS50 Introduction to Computer Science**](https://pll.harvard.edu/course/cs50-introduction-computer-science) course by Harvard's OpenCourseWare and this is the year 2025 version.
-Some programs were written by me from scratch, others would have help functions or would have TODO comments put in place for me to implement the functionality required.
+Some programs were fully written by me from scratch, others would have help functions or would have TODO comments put in place for me to implement the functionality required, and therefore I can only claim authorship of the code written by me in those TODO blocks.
 
 ## Set of problems Week 1 - Intro to C
 
@@ -16,19 +16,6 @@ The task was to implement a program in C that recreates that pyramid, using hash
           ##
          ###
         ####
-       #####
-      ######
-     #######
-    ########
-```
-
-The user is to be prompted for an int for the pyramid’s actual height, so that the program can also output shorter pyramids like the below:
-
-```
-    #
-    ##
-    ###
-    ####
 ```
 
 Re-prompting the user, again and again as needed, if their input is not greater than 0 or not an int altogether.
@@ -52,7 +39,6 @@ So the program prompts the user for a credit card number and then reports (via p
 The task was to create a program in C that determines the winner of a short Scrabble-like game. The program prompts for input twice: once for “Player 1” to input their word and once for “Player 2” to input their word. Then, depending on which player scores the most points, the program either prints “Player 1 wins!”, “Player 2 wins!”, or “Tie!” (in the event the two players score equal points). For example:
 
 ```
-$ make scrabble
 $ ./scrabble
 Player 1: Question?
 Player 2: Question!
@@ -98,7 +84,7 @@ This week's lecture explained 3 types of basic algorithms used to sort through d
 
 Context: “plurality vote” (also known as “first-past-the-post” or “winner take all”): every voter gets to vote for one candidate. At the end of the election, whichever candidate has the greatest number of votes is declared the winner of the election.
 
-This task was about completing the TODO tasks to make the program functional (therefore only the code blocks after the TODO are what I wrote for the task). Example of how the program should behave:
+This task was about **completing the TODO functions** to make the program functional (therefore only the code blocks after the TODO are what I wrote for the task). Example of how the program should behave:
 
 ```
 $ ./plurality Alice Bob Charlie
@@ -124,6 +110,27 @@ If no candidate has more than 50% of the vote, then an “instant runoff” occu
 
 The process repeats: if no candidate has a majority of the votes, the last place candidate is eliminated, and anyone who voted for them will instead vote for their next preference (who hasn’t themselves already been eliminated). Once a candidate has a majority, that candidate is declared the winner.
 
-The task was to implement a runoff program in C.
+The task was to **complete the TODO functions** of a runoff program in C.
 
-### Tideman (file added but problem not solved.)
+### Tideman (file added but TODO tasks not completed.)
+
+## Set of problems Week 4 - Memory
+
+## Set of problems Week 5 - Data Structures
+
+Exploring the use of algorithms traversing through data structures.
+Theoretically, on input of size n, an algorithm with a running time of n is “asymptotically equivalent,” in terms of O, to an algorithm with a running time of 2n. When describing the running time of an algorithm, we typically focus on the dominant (i.e., most impactful) term (i.e., n in this case, since n could be much larger than 2). In the real world, though, the fact of the matter is that 2n feels twice as slow as n.
+
+### Inheritance
+
+Context: A person’s blood type is determined by two alleles (i.e., different forms of a gene). The three possible alleles are A, B, and O, of which each person has two (possibly the same, possibly different). Each of a child’s parents randomly passes one of their two blood type alleles to their child. The possible blood type combinations, then, are: OO, OA, OB, AO, AA, AB, BO, BA, and BB.
+
+For example, if one parent has blood type AO and the other parent has blood type BB, then the child’s possible blood types would be AB and OB, depending on which allele is received from each parent. Similarly, if one parent has blood type AO and the other OB, then the child’s possible blood types would be AO, OB, AB, and OO.
+
+The task was to simulate the inheritance of blood types for each member of a family **completing the TODO tasks** in a program in C.
+
+### Speller
+
+This assignment had very **defined TODO tasks** for me to complete in a file called dictionary.c.
+The challenge was to implement, in order: load, hash, size, check, and unload as efficiently as possible using a hash table in such a way that TIME IN load, TIME IN check, TIME IN size, and TIME IN unload are all minimized. To be sure, it’s not obvious what it even means to be minimized, inasmuch as these benchmarks will certainly vary as you feed speller different values for dictionary and for text. But therein lies the challenge, if not the fun, of this problem.
+Quote from the task: "This problem is your chance to design. Although we invite you to minimize space, your ultimate enemy is time."

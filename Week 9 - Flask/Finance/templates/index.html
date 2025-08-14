@@ -1,0 +1,35 @@
+<!-- All code given in all html files given by CS50 -->
+{% extends "layout.html" %} {% block title %} Dashboard {% endblock %} {% block
+main %}
+<h1>Dashboard</h1>
+<table class="table table-bordered table-striped">
+  <thead class="thead-light">
+    <tr>
+      <th>Symbol</th>
+      <th>Name</th>
+      <th>Number of shares</th>
+      <th>Price</th>
+      <th>Total Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for stock in stocks %}
+    <tr>
+      <td>{{ stock.symbol }}</td>
+      <td>{{ stock.name }}</td>
+      <td>{{ stock.total_shares }}</td>
+      <td>{{ stock.price | usd }}</td>
+      <td>{{ stock.value | usd }}</td>
+    </tr>
+    {% endfor %}
+    <tr>
+      <td colspan="4" align="right">Funds</td>
+      <td>{{ cash | usd }}</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="right">Total Value</td>
+      <td>{{ total_value | usd }}</td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}

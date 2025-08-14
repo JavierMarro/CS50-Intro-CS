@@ -1,0 +1,13 @@
+<!-- All code given in all html files given by CS50 -->
+{% extends "layout.html" %} {% block title %} Quote {% endblock %} {% block main
+%}
+<h1>Stock quotes here</h1>
+<form action="/quote" method="post">
+  <label for="symbol">Symbol:</label>
+  <input type="text" name="symbol" id="symbol" placeholder="Stock name" />
+  <button class="btn btn-primary" type="submit">Get Quote</button>
+</form>
+{% if quote %}
+<h2>{{ quote['name'] }} ({{ quote['symbol'] }})</h2>
+<p>Price: {{ quote['price'] | usd }}</p>
+{% endif %} {% endblock %}

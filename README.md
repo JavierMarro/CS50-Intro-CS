@@ -161,3 +161,52 @@ The task was to simulate the inheritance of blood types for each member of a fam
 This assignment had very **defined TODO tasks** for me to complete in a file called dictionary.c.
 The challenge was to implement, in order: load, hash, size, check, and unload as efficiently as possible using a hash table in such a way that TIME IN load, TIME IN check, TIME IN size, and TIME IN unload are all minimized. To be sure, it’s not obvious what it even means to be minimized, inasmuch as these benchmarks will certainly vary as you feed speller different values for dictionary and for text. But therein lies the challenge, if not the fun, of this problem.
 Quote from the task: "This problem is your chance to design. Although we invite you to minimize space, your ultimate enemy is time."
+
+## Set of problems Week 9 - Flask
+
+**Week to explore the use of the framework Flask (based on Python) combined with web programming (HTML & CSS) to create web apps.**
+Link to lecture on Youtube: [CS50x 2025 - Lecture 9 - Flask](https://www.youtube.com/watch?v=1r-dFbPQ7Z8)
+
+- [Birthdays](https://cs50.harvard.edu/x/psets/9/birthdays/)
+
+The task was to create a web application to keep track of friends’ birthdays by **completing the TODO tasks** unifying the code produced in several files.
+
+The TODO tasks involved html manipulation, creating a form for users to submit and adding a loop that would fetch the data from the database. The SQLite database with all birthdays hasn't been uploaded to this repo.
+
+The app.py contained the start of a Flask web application. The application has one route (/) that accepts both POST requests (after the if) and GET requests (after the else). The TODO tasks involved fetching, inserting new data, and displaying the data from the db.
+
+- [Finance](https://cs50.harvard.edu/x/psets/9/finance/)
+
+This assignment had very **defined and extensive TODO tasks** for me to complete in a file called app.py, and all code produced within those endpoints was my solution to the task:
+
+```py
+@app.route("/quote", methods=["GET", "POST"])
+@login_required
+def quote():
+    """Get stock quote."""
+    return apology("TODO")
+
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    """Register user"""
+    return apology("TODO")
+
+
+@app.route("/sell", methods=["GET", "POST"])
+@login_required
+def sell():
+    """Sell shares of stock"""
+    return apology("TODO")
+```
+
+The challenge was to implement, in order: register, quote, sell endpoints for C$50 Finance, a web app via which you can manage portfolios of stocks. Not only will this tool allow the user to check real stocks’ prices and portfolios’ values, it will also let the user “buy” and “sell” stocks by querying for stocks’ prices.
+
+Context regarding the code that was given by CS50:
+After configuring Flask, notice how this file disables caching of responses (provided you’re in debugging mode, which you are by default in your code50 codespace), lest you make a change to some file but your browser not notice. Notice next how it configures Jinja with a custom “filter,” usd, a function (defined in helpers.py) that will make it easier to format values as US dollars (USD). It then further configures Flask to store sessions on the local filesystem (i.e., disk) as opposed to storing them inside of (digitally signed) cookies, which is Flask’s default. The file then configures CS50’s SQL module to use finance.db.
+
+Thereafter are a whole bunch of routes, only two of which are fully implemented: login and logout. Read through the implementation of login first. Notice how it uses db.execute (from CS50’s library) to query finance.db. And notice how it uses check_password_hash to compare hashes of users’ passwords. Also notice how login “remembers” that a user is logged in by storing his or her user_id, an INTEGER, in session. That way, any of this file’s routes can check which user, if any, is logged in. Finally, notice how once the user has successfully logged in, login will redirect to "/", taking the user to their home page. Meanwhile, notice how logout simply clears session, effectively logging a user out.
+
+Notice how most routes are “decorated” with @login_required (a function defined in helpers.py too). That decorator ensures that, if a user tries to visit any of those routes, he or she will first be redirected to login so as to log in.
+
+Notice too how most routes support GET and POST. Even so, most of them (for now!) simply return an “apology,” since they’re not yet implemented.

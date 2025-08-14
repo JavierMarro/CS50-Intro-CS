@@ -1,0 +1,29 @@
+<!-- All code given in all html files given by CS50 -->
+{% extends "layout.html" %} {% block title %} History {% endblock %} {% block
+main %}
+<h1>History of transactions</h1>
+<table class="table table-bordered table-striped">
+  <thead class="thead-light">
+    <tr>
+      <th>Type</th>
+      <th>Symbol</th>
+      <th>Number of shares</th>
+      <th>Price</th>
+      <th>Total Value</th>
+      <th>Time of transaction</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for transaction in transactions %}
+    <tr>
+      <td>{{ transaction.type }}</td>
+      <td>{{ transaction.symbol }}</td>
+      <td>{{ transaction.shares }}</td>
+      <td>{{ transaction.price | usd }}</td>
+      <td>{{ (transaction.shares * transaction.price) | usd }}</td>
+      <td>{{ transaction.timestamp | usd }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

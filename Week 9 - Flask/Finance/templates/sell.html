@@ -1,0 +1,28 @@
+<!-- All code given in all html files given by CS50 -->
+{% extends "layout.html" %} {% block title %} Sell shares {% endblock %} {%
+block main %}
+<h1>Sell shares</h1>
+<form action="/sell" method="post">
+  <div class="form-group">
+    <label for="symbol">Symbol:</label>
+    <select class="form-control" id="symbol" name="symbol">
+      {% for stock in stocks %}
+      <option value="{{stock.symbol}}">
+        {{ stock.name }} {{ stock.symbol }}
+      </option>
+      > {% endfor %}
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="shares">Number of shares:</label>
+    <input
+      type="number"
+      class="form-control"
+      name="shares"
+      id="shares"
+      placeholder="Number of shares"
+    />
+  </div>
+  <button class="btn btn-primary" type="submit" value="Sell">Sell</button>
+</form>
+{% endblock %}

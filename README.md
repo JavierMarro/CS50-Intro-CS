@@ -213,6 +213,4 @@ Notice too how most routes support GET and POST. Even so, most of them (for now!
 
 ## Certificate of completion
 
-<p align="center">
-  <img src="https://i.ibb.co/VYNYn5BX/CS50x-JMR-A4.png" alt="Java Programming II Certificate" width="700"/>
-</p>
+![Javier Martinez Romera CS50 Certificate](https://i.ibb.co/VYNYn5BX/CS50x-JMR-A4.png "CS50: Introduction to Computer Science Certificate")

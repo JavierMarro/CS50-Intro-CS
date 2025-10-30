@@ -213,4 +213,6 @@ Notice too how most routes support GET and POST. Even so, most of them (for now!
 
 ## Certificate of completion
 
-![Javier Martinez Romera CS50 Certificate](https://i.ibb.co/VYNYn5BX/CS50x-JMR-A4.png "CS50: Introduction to Computer Science Certificate")
+<p align="center">
+  <img width="700" alt="CS50 Certificate" src="https://github.com/user-attachments/assets/e0d32a8f-4bdd-4d6c-b08a-3abf9883e610" />
+</p>

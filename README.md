@@ -210,3 +210,9 @@ Thereafter are a whole bunch of routes, only two of which are fully implemented:
 Notice how most routes are “decorated” with @login_required (a function defined in helpers.py too). That decorator ensures that, if a user tries to visit any of those routes, he or she will first be redirected to login so as to log in.
 
 Notice too how most routes support GET and POST. Even so, most of them (for now!) simply return an “apology,” since they’re not yet implemented.
+
+## Certificate of completion
+
+<p align="center">
+  <img src="https://i.ibb.co/VYNYn5BX/CS50x-JMR-A4.png" alt="Java Programming II Certificate" width="700"/>
+</p>
